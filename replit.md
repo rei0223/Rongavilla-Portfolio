@@ -4,6 +4,12 @@ This is a full-stack portfolio website for Rey-Ann Rongavilla, an IT professiona
 
 The project is built as a single-page application with a React frontend and Express.js backend, designed to present a comprehensive professional portfolio with interactive elements and smooth user experience.
 
+## Recent Updates (August 2025)
+- Added Technical Journey Gallery section featuring real photos of hands-on IT work
+- Implemented minimalist aesthetic design across all components
+- Updated typography with lighter font weights and cleaner layouts
+- Enhanced visual hierarchy with consistent spacing and subtle animations
+
 # User Preferences
 
 Preferred communication style: Simple, everyday language.

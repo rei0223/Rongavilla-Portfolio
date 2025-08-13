@@ -11,6 +11,7 @@ export default function Navigation() {
     { label: "Projects", href: "#projects" },
     { label: "Experience", href: "#experience" },
     { label: "Education", href: "#education" },
+    { label: "Gallery", href: "#technical-gallery" },
     { label: "Contact", href: "#contact" },
   ];
 
