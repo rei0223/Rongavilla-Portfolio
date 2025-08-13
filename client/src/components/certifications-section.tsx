@@ -32,23 +32,23 @@ export default function CertificationsSection() {
   const isInView = useInView(ref, { once: true });
 
   return (
-    <section className="py-16 bg-white" ref={ref}>
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
+    <section className="section-padding bg-gray-50" ref={ref}>
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="text-center mb-20">
           <motion.h2
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 20 }}
             animate={isInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.6 }}
-            className="text-3xl md:text-4xl font-bold text-navy mb-4"
+            className="text-2xl sm:text-3xl font-light text-navy mb-6 text-balance"
             data-testid="certifications-title"
           >
             Certifications & Training
           </motion.h2>
           <motion.p
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 20 }}
             animate={isInView ? { opacity: 1, y: 0 } : {}}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            className="text-lg text-gray-600 max-w-2xl mx-auto"
+            transition={{ duration: 0.6, delay: 0.1 }}
+            className="text-gray-500 max-w-2xl mx-auto leading-relaxed"
             data-testid="certifications-description"
           >
             Continuous learning through industry-recognized certifications and professional development
@@ -59,40 +59,40 @@ export default function CertificationsSection() {
           {certificationsData.map((cert, index) => (
             <motion.div
               key={cert.title}
-              initial={{ opacity: 0, y: 30 }}
+              initial={{ opacity: 0, y: 20 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.6, delay: index * 0.2 }}
-              className={`bg-gradient-to-br ${cert.bgGradient} p-8 rounded-xl border ${cert.borderColor} card-hover`}
+              transition={{ duration: 0.6, delay: index * 0.1 }}
+              className="bg-white p-8 rounded-lg card-minimal"
               data-testid={`certification-card-${cert.title.toLowerCase().replace(/[^a-z]/g, '-')}`}
             >
-              <div className="flex items-center mb-6">
-                <div className={`w-16 h-16 ${cert.iconBg} rounded-lg flex items-center justify-center mr-4`}>
-                  <cert.icon className="text-white text-2xl" />
+              <div className="flex items-start space-x-4 mb-6">
+                <div className="w-12 h-12 bg-gray-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                  <cert.icon className="text-gray-600 text-xl" />
                 </div>
                 <div>
-                  <h3 className="text-xl font-semibold text-navy" data-testid={`cert-title-${index}`}>
+                  <h3 className="text-lg font-medium text-navy mb-1" data-testid={`cert-title-${index}`}>
                     {cert.title}
                   </h3>
-                  <p className="text-gray-600" data-testid={`cert-provider-${index}`}>
+                  <p className="text-gray-500 text-sm" data-testid={`cert-provider-${index}`}>
                     {cert.provider}
                   </p>
                 </div>
               </div>
-              <div className="space-y-3">
+              <div className="space-y-4 text-sm">
                 <div className="flex justify-between items-center">
-                  <span className="text-sm font-medium text-gray-700">Certificate ID:</span>
-                  <span className="text-sm text-gray-600 font-mono" data-testid={`cert-id-${index}`}>
+                  <span className="text-gray-600">Certificate ID:</span>
+                  <span className="text-gray-400 font-mono text-xs" data-testid={`cert-id-${index}`}>
                     {cert.certificateId}
                   </span>
                 </div>
                 <div className="flex justify-between items-center">
-                  <span className="text-sm font-medium text-gray-700">Expiry Date:</span>
-                  <span className="text-sm text-gray-600" data-testid={`cert-expiry-${index}`}>
+                  <span className="text-gray-600">Expiry Date:</span>
+                  <span className="text-gray-500" data-testid={`cert-expiry-${index}`}>
                     {cert.expiryDate}
                   </span>
                 </div>
-                <div className="pt-3">
-                  <span className="bg-green-100 text-green-800 px-3 py-1 rounded-full text-xs font-medium">
+                <div className="pt-2">
+                  <span className="bg-green-50 text-green-700 px-3 py-1 rounded-md text-xs font-medium">
                     <CheckCircle className="w-3 h-3 inline mr-1" />
                     Active
                   </span>

@@ -23,20 +23,20 @@ export default function Navigation() {
   };
 
   return (
-    <nav className="fixed top-0 w-full z-50 navbar-blur border-b border-gray-200" data-testid="navigation">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center py-4">
-          <div className="text-xl font-bold text-navy" data-testid="brand-name">
+    <nav className="fixed top-0 w-full z-50 navbar-blur" data-testid="navigation">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex justify-between items-center py-6">
+          <div className="text-lg font-medium text-navy" data-testid="brand-name">
             Rey-Ann Rongavilla
           </div>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex space-x-8">
+          <div className="hidden md:flex space-x-12">
             {navItems.map((item) => (
               <button
                 key={item.label}
                 onClick={() => handleNavClick(item.href)}
-                className="text-gray-700 hover:text-navy transition-colors"
+                className="text-sm font-medium text-gray-600 hover:text-navy transition-colors duration-200"
                 data-testid={`nav-link-${item.label.toLowerCase()}`}
               >
                 {item.label}

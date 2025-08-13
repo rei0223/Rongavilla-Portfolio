@@ -21,9 +21,9 @@ export default function Home() {
   }, []);
 
   return (
-    <div className="min-h-screen bg-gray-50 text-gray-800 font-inter">
+    <div className="min-h-screen bg-white text-gray-900 font-inter">
       <Navigation />
-      <main>
+      <main className="space-y-0">
         <HeroSection />
         <SkillsSection />
         <ProjectsSection />

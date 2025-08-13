@@ -23,26 +23,26 @@ export default function TestimonialsSection() {
   const isInView = useInView(ref, { once: true });
 
   return (
-    <section className="py-16 bg-white" ref={ref}>
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
+    <section className="section-padding bg-gray-50" ref={ref}>
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="text-center mb-20">
           <motion.h2
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 20 }}
             animate={isInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.6 }}
-            className="text-3xl md:text-4xl font-bold text-navy mb-4"
+            className="text-2xl sm:text-3xl font-light text-navy mb-6 text-balance"
             data-testid="testimonials-title"
           >
-            What Others Say
+            Professional References
           </motion.h2>
           <motion.p
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 20 }}
             animate={isInView ? { opacity: 1, y: 0 } : {}}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            className="text-lg text-gray-600 max-w-2xl mx-auto"
+            transition={{ duration: 0.6, delay: 0.1 }}
+            className="text-gray-500 max-w-2xl mx-auto leading-relaxed"
             data-testid="testimonials-description"
           >
-            Feedback from supervisors and colleagues highlighting professional capabilities
+            What colleagues and supervisors say about my work and professional contributions
           </motion.p>
         </div>
 
@@ -50,30 +50,30 @@ export default function TestimonialsSection() {
           {testimonialsData.map((testimonial, index) => (
             <motion.div
               key={testimonial.name}
-              initial={{ opacity: 0, y: 30 }}
+              initial={{ opacity: 0, y: 20 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.6, delay: index * 0.2 }}
-              className="bg-gray-50 p-8 rounded-xl relative card-hover"
+              transition={{ duration: 0.6, delay: index * 0.1 }}
+              className="bg-white p-8 rounded-lg relative card-minimal"
               data-testid={`testimonial-card-${index}`}
             >
-              <div className="absolute top-4 left-4 text-4xl text-navy opacity-20">
-                <Quote className="w-8 h-8" />
+              <div className="absolute top-6 left-6 text-navy/10">
+                <Quote className="w-6 h-6" />
               </div>
               <div className="relative z-10">
-                <p className="text-gray-700 mb-6 italic" data-testid={`testimonial-quote-${index}`}>
+                <p className="text-gray-600 mb-6 leading-relaxed text-sm" data-testid={`testimonial-quote-${index}`}>
                   "{testimonial.quote}"
                 </p>
                 <div className="flex items-center">
-                  <div className="w-12 h-12 bg-navy rounded-full flex items-center justify-center mr-4">
-                    <span className="text-white font-semibold" data-testid={`testimonial-initials-${index}`}>
+                  <div className="w-10 h-10 bg-gray-100 rounded-full flex items-center justify-center mr-4">
+                    <span className="text-navy font-medium text-sm" data-testid={`testimonial-initials-${index}`}>
                       {testimonial.initials}
                     </span>
                   </div>
                   <div>
-                    <p className="font-semibold text-navy" data-testid={`testimonial-name-${index}`}>
+                    <p className="font-medium text-navy text-sm" data-testid={`testimonial-name-${index}`}>
                       {testimonial.name}
                     </p>
-                    <p className="text-gray-600 text-sm" data-testid={`testimonial-title-${index}`}>
+                    <p className="text-gray-500 text-xs" data-testid={`testimonial-title-${index}`}>
                       {testimonial.title}
                     </p>
                   </div>

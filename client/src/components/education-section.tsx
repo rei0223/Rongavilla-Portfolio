@@ -44,23 +44,23 @@ export default function EducationSection() {
   const isInView = useInView(ref, { once: true });
 
   return (
-    <section id="education" className="py-16 bg-gray-50" ref={ref}>
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
+    <section id="education" className="section-padding bg-white" ref={ref}>
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="text-center mb-20">
           <motion.h2
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 20 }}
             animate={isInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.6 }}
-            className="text-3xl md:text-4xl font-bold text-navy mb-4"
+            className="text-2xl sm:text-3xl font-light text-navy mb-6 text-balance"
             data-testid="education-title"
           >
             Education
           </motion.h2>
           <motion.p
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 20 }}
             animate={isInView ? { opacity: 1, y: 0 } : {}}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            className="text-lg text-gray-600 max-w-2xl mx-auto"
+            transition={{ duration: 0.6, delay: 0.1 }}
+            className="text-gray-500 max-w-2xl mx-auto leading-relaxed"
             data-testid="education-description"
           >
             Strong academic foundation in Information Technology and related fields
@@ -71,43 +71,41 @@ export default function EducationSection() {
           {educationData.map((education, index) => (
             <motion.div
               key={education.degree}
-              initial={{ opacity: 0, y: 30 }}
+              initial={{ opacity: 0, y: 20 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.6, delay: index * 0.2 }}
-              className="bg-white p-8 rounded-xl shadow-lg card-hover"
+              transition={{ duration: 0.6, delay: index * 0.1 }}
+              className="bg-gray-50 p-8 rounded-lg card-minimal"
               data-testid={`education-card-${education.type.toLowerCase().replace(/[^a-z]/g, '-')}`}
             >
-              <div className="text-center mb-6">
-                <education.icon className="w-12 h-12 text-navy mb-4 mx-auto" />
-                <h3 className="text-xl font-semibold text-navy">{education.type}</h3>
-              </div>
-              <div className="space-y-3">
+              <div className="flex items-start space-x-4 mb-6">
+                <education.icon className="w-8 h-8 text-navy flex-shrink-0 mt-1" />
                 <div>
-                  <p className="font-semibold text-gray-800" data-testid={`degree-${index}`}>
+                  <h3 className="text-lg font-medium text-navy mb-1">{education.type}</h3>
+                  <p className="text-gray-600 text-sm font-medium mb-1" data-testid={`degree-${index}`}>
                     {education.degree}
                   </p>
-                  <p className="text-gray-600" data-testid={`institution-${index}`}>
+                  <p className="text-gray-500 text-sm mb-1" data-testid={`institution-${index}`}>
                     {education.institution}
                   </p>
-                  <p className="text-gray-500" data-testid={`period-${index}`}>
+                  <p className="text-gray-400 text-sm" data-testid={`period-${index}`}>
                     {education.period}
                   </p>
                 </div>
-                <div className="pt-4">
-                  <p className="text-sm text-gray-700 font-medium mb-2">
-                    {education.type === "Bachelor's Degree" ? "Relevant Coursework:" : "Specialized in:"}
-                  </p>
-                  <div className="flex flex-wrap gap-2">
-                    {education.coursework.map((course, courseIndex) => (
-                      <span
-                        key={course}
-                        className={`px-3 py-1 rounded-full text-xs ${courseColors[courseIndex % courseColors.length]}`}
-                        data-testid={`course-${course.toLowerCase().replace(/[^a-z]/g, '-')}`}
-                      >
-                        {course}
-                      </span>
-                    ))}
-                  </div>
+              </div>
+              <div>
+                <p className="text-sm text-gray-600 mb-4">
+                  {education.type === "Bachelor's Degree" ? "Relevant Coursework:" : "Specialized in:"}
+                </p>
+                <div className="flex flex-wrap gap-2">
+                  {education.coursework.map((course, courseIndex) => (
+                    <span
+                      key={course}
+                      className="px-3 py-1 rounded-md text-xs bg-white text-gray-600 font-medium"
+                      data-testid={`course-${course.toLowerCase().replace(/[^a-z]/g, '-')}`}
+                    >
+                      {course}
+                    </span>
+                  ))}
                 </div>
               </div>
             </motion.div>

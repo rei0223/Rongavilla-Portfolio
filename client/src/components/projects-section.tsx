@@ -45,23 +45,23 @@ export default function ProjectsSection() {
   const isInView = useInView(ref, { once: true });
 
   return (
-    <section id="projects" className="py-16 bg-gray-50" ref={ref}>
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
+    <section id="projects" className="section-padding bg-white" ref={ref}>
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="text-center mb-20">
           <motion.h2
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 20 }}
             animate={isInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.6 }}
-            className="text-3xl md:text-4xl font-bold text-navy mb-4"
+            className="text-2xl sm:text-3xl font-light text-navy mb-6 text-balance"
             data-testid="projects-title"
           >
             Featured Projects
           </motion.h2>
           <motion.p
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 20 }}
             animate={isInView ? { opacity: 1, y: 0 } : {}}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            className="text-lg text-gray-600 max-w-2xl mx-auto"
+            transition={{ duration: 0.6, delay: 0.1 }}
+            className="text-gray-500 max-w-2xl mx-auto leading-relaxed"
             data-testid="projects-description"
           >
             Showcasing practical applications of my technical skills and problem-solving abilities
@@ -72,10 +72,10 @@ export default function ProjectsSection() {
           {projectsData.map((project, index) => (
             <motion.div
               key={project.title}
-              initial={{ opacity: 0, y: 30 }}
+              initial={{ opacity: 0, y: 20 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.6, delay: index * 0.2 }}
-              className="bg-white rounded-xl shadow-lg overflow-hidden card-hover"
+              transition={{ duration: 0.6, delay: index * 0.1 }}
+              className="bg-white rounded-lg overflow-hidden card-minimal"
               data-testid={`project-card-${project.title.toLowerCase().replace(/[^a-z]/g, '-')}`}
             >
               <img
@@ -85,17 +85,17 @@ export default function ProjectsSection() {
                 data-testid={`project-image-${index}`}
               />
               <div className="p-6">
-                <h3 className="text-xl font-semibold text-navy mb-3" data-testid={`project-title-${index}`}>
+                <h3 className="text-lg font-medium text-navy mb-3" data-testid={`project-title-${index}`}>
                   {project.title}
                 </h3>
-                <p className="text-gray-600 mb-4" data-testid={`project-description-${index}`}>
+                <p className="text-gray-500 text-sm mb-6 leading-relaxed" data-testid={`project-description-${index}`}>
                   {project.description}
                 </p>
-                <div className="flex flex-wrap gap-2 mb-4">
+                <div className="flex flex-wrap gap-2 mb-6">
                   {project.technologies.map((tech) => (
                     <span
                       key={tech}
-                      className={`px-3 py-1 rounded-full text-sm ${technologyColors[tech] || "bg-gray-200 text-gray-700"}`}
+                      className="px-3 py-1 rounded-full text-xs bg-gray-100 text-gray-600 font-medium"
                       data-testid={`tech-tag-${tech.toLowerCase().replace(/[^a-z]/g, '-')}`}
                     >
                       {tech}
@@ -103,13 +103,13 @@ export default function ProjectsSection() {
                   ))}
                 </div>
                 <div className="flex items-center justify-between">
-                  <span className="text-sm text-gray-500" data-testid={`project-period-${index}`}>
+                  <span className="text-xs text-gray-400" data-testid={`project-period-${index}`}>
                     {project.period}
                   </span>
                   <Button
                     variant="ghost"
                     size="sm"
-                    className="text-navy hover:text-light-blue"
+                    className="text-navy hover:text-navy-light p-1"
                     data-testid={`project-link-${index}`}
                   >
                     <ExternalLink className="w-4 h-4" />

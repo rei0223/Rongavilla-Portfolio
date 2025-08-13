@@ -88,23 +88,23 @@ export default function ContactSection() {
   ];
 
   return (
-    <section id="contact" className="py-16 bg-navy text-white" ref={ref}>
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
+    <section id="contact" className="section-padding gradient-minimal text-white" ref={ref}>
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="text-center mb-20">
           <motion.h2
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 20 }}
             animate={isInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.6 }}
-            className="text-3xl md:text-4xl font-bold mb-4"
+            className="text-2xl sm:text-3xl font-light mb-6 text-balance"
             data-testid="contact-title"
           >
             Get In Touch
           </motion.h2>
           <motion.p
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 20 }}
             animate={isInView ? { opacity: 1, y: 0 } : {}}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            className="text-lg text-blue-200 max-w-2xl mx-auto"
+            transition={{ duration: 0.6, delay: 0.1 }}
+            className="text-white/70 max-w-2xl mx-auto leading-relaxed"
             data-testid="contact-description"
           >
             Ready to collaborate or discuss opportunities? I'd love to hear from you.
@@ -144,12 +144,12 @@ export default function ContactSection() {
             </div>
 
             {/* QR Code Placeholder */}
-            <div className="mt-8 p-6 bg-white rounded-lg text-center">
-              <p className="text-navy font-medium mb-4">Scan to view portfolio</p>
-              <div className="w-32 h-32 bg-gray-200 rounded-lg mx-auto flex items-center justify-center" data-testid="qr-code-placeholder">
-                <QrCode className="w-16 h-16 text-gray-400" />
+            <div className="mt-8 p-6 bg-white/10 rounded-lg text-center border border-white/20">
+              <p className="text-white/80 font-medium mb-4">Scan to view portfolio</p>
+              <div className="w-24 h-24 bg-white/10 rounded-lg mx-auto flex items-center justify-center" data-testid="qr-code-placeholder">
+                <QrCode className="w-12 h-12 text-white/40" />
               </div>
-              <p className="text-navy text-sm mt-2">QR Code to Portfolio</p>
+              <p className="text-white/60 text-sm mt-2">QR Code to Portfolio</p>
             </div>
           </motion.div>
 
@@ -243,8 +243,7 @@ export default function ContactSection() {
                 <Button
                   type="submit"
                   disabled={contactMutation.isPending}
-                  className="w-full bg-light-blue text-white hover:bg-blue-600 focus:ring-2 focus:ring-blue-400 focus:ring-offset-2 focus:ring-offset-navy"
-                  size="lg"
+                  className="w-full bg-white text-navy hover:bg-gray-50 py-3 rounded-md font-medium transition-all duration-200"
                   data-testid="button-submit"
                 >
                   {contactMutation.isPending ? "Sending..." : "Send Message"}
