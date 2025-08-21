@@ -1,0 +1,976 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rey-Ann Rongavilla - IT Professional Portfolio</title>
+    <meta name="description" content="Rey-Ann Rongavilla - Recent BSIT graduate specializing in IT infrastructure support, system monitoring, and troubleshooting. Explore my portfolio showcasing technical skills and professional experience.">
+    <meta name="keywords" content="IT Professional, Technical Support, System Administration, Network Configuration, Rey-Ann Rongavilla">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'navy': '#1e3a8a',
+                        'light-blue': '#3b82f6',
+                        'accent': '#10b981'
+                    },
+                    fontFamily: {
+                        'inter': ['Inter', 'sans-serif']
+                    }
+                }
+            }
+        };
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        .skill-progress {
+            transition: width 2s ease-in-out;
+        }
+        
+        .card-hover {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.6s ease, transform 0.6s ease;
+        }
+        
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        .navbar-blur {
+            backdrop-filter: blur(10px);
+            background-color: rgba(255, 255, 255, 0.9);
+        }
+    </style>
+</head>
+<body class="font-inter bg-gray-50 text-gray-800">
+    <!-- Navigation -->
+    <!-- @COMPONENT: Navigation -->
+    <nav class="fixed top-0 w-full z-50 navbar-blur border-b border-gray-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center py-4">
+                <div class="text-xl font-bold text-navy">Rey-Ann Rongavilla</div>
+                
+                <!-- Desktop Navigation -->
+                <div class="hidden md:flex space-x-8">
+                    <a href="#home" class="text-gray-700 hover:text-navy transition-colors">Home</a>
+                    <a href="#skills" class="text-gray-700 hover:text-navy transition-colors">Skills</a>
+                    <a href="#projects" class="text-gray-700 hover:text-navy transition-colors">Projects</a>
+                    <a href="#experience" class="text-gray-700 hover:text-navy transition-colors">Experience</a>
+                    <a href="#education" class="text-gray-700 hover:text-navy transition-colors">Education</a>
+                    <a href="#contact" class="text-gray-700 hover:text-navy transition-colors">Contact</a>
+                </div>
+                
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-btn" class="md:hidden text-gray-700">
+                    <i class="fas fa-bars text-xl"></i>
+                </button>
+            </div>
+            
+            <!-- Mobile Navigation -->
+            <div id="mobile-menu" class="hidden md:hidden pb-4">
+                <div class="flex flex-col space-y-3">
+                    <a href="#home" class="text-gray-700 hover:text-navy transition-colors">Home</a>
+                    <a href="#skills" class="text-gray-700 hover:text-navy transition-colors">Skills</a>
+                    <a href="#projects" class="text-gray-700 hover:text-navy transition-colors">Projects</a>
+                    <a href="#experience" class="text-gray-700 hover:text-navy transition-colors">Experience</a>
+                    <a href="#education" class="text-gray-700 hover:text-navy transition-colors">Education</a>
+                    <a href="#contact" class="text-gray-700 hover:text-navy transition-colors">Contact</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!-- @END_COMPONENT: Navigation -->
+
+    <!-- Hero Section -->
+    <!-- @COMPONENT: HeroSection -->
+    <section id="home" class="pt-20 pb-16 bg-gradient-to-br from-navy to-blue-800 text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col lg:flex-row items-center justify-between">
+                <div class="lg:w-1/2 text-center lg:text-left">
+                    <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-4 fade-in">
+                        Rey-Ann Rongavilla
+                    </h1>
+                    <h2 class="text-xl md:text-2xl lg:text-3xl text-blue-200 mb-6 fade-in">
+                        IT Infrastructure Specialist & System Administrator
+                    </h2>
+                    <p class="text-lg md:text-xl text-blue-100 mb-8 max-w-2xl fade-in">
+                        Recent BSIT graduate with hands-on experience in IT infrastructure support, system monitoring, and troubleshooting. 
+                        Passionate about optimizing operational efficiency through innovative technical solutions.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start fade-in">
+                        <a href="#contact" class="bg-white text-navy px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
+                            Get In Touch
+                        </a>
+                        <a href="#projects" class="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-navy transition-colors">
+                            View My Work
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="lg:w-1/2 mt-12 lg:mt-0 flex justify-center">
+                    <div class="w-80 h-80 bg-white/10 rounded-full flex items-center justify-center border-4 border-white/20 fade-in">
+                        <!-- Professional photo placeholder -->
+                        <div class="w-72 h-72 bg-white/20 rounded-full flex items-center justify-center" data-mock="true">
+                            <i class="fas fa-user text-8xl text-white/60"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- @END_COMPONENT: HeroSection -->
+
+    <!-- Skills Overview -->
+    <!-- @COMPONENT: SkillsSection -->
+    <section id="skills" class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-navy mb-4 fade-in">Skills & Expertise</h2>
+                <p class="text-lg text-gray-600 max-w-2xl mx-auto fade-in">
+                    Comprehensive technical and soft skills developed through education and hands-on experience
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Technical Skills -->
+                <div class="bg-gray-50 p-6 rounded-xl card-hover fade-in">
+                    <div class="text-center mb-6">
+                        <i class="fas fa-cogs text-4xl text-navy mb-4"></i>
+                        <h3 class="text-xl font-semibold text-navy">Technical Skills</h3>
+                    </div>
+                    <div class="space-y-4">
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span class="text-sm font-medium">System Monitoring</span>
+                                <span class="text-sm text-gray-500">90%</span>
+                            </div>
+                            <div class="bg-gray-200 rounded-full h-2">
+                                <div class="bg-navy h-2 rounded-full skill-progress" style="width: 90%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span class="text-sm font-medium">Troubleshooting</span>
+                                <span class="text-sm text-gray-500">85%</span>
+                            </div>
+                            <div class="bg-gray-200 rounded-full h-2">
+                                <div class="bg-navy h-2 rounded-full skill-progress" style="width: 85%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span class="text-sm font-medium">Windows OS Admin</span>
+                                <span class="text-sm text-gray-500">88%</span>
+                            </div>
+                            <div class="bg-gray-200 rounded-full h-2">
+                                <div class="bg-navy h-2 rounded-full skill-progress" style="width: 88%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Network & Infrastructure -->
+                <div class="bg-gray-50 p-6 rounded-xl card-hover fade-in">
+                    <div class="text-center mb-6">
+                        <i class="fas fa-network-wired text-4xl text-light-blue mb-4"></i>
+                        <h3 class="text-xl font-semibold text-navy">Network & Infrastructure</h3>
+                    </div>
+                    <div class="space-y-4">
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span class="text-sm font-medium">Network Setup</span>
+                                <span class="text-sm text-gray-500">82%</span>
+                            </div>
+                            <div class="bg-gray-200 rounded-full h-2">
+                                <div class="bg-light-blue h-2 rounded-full skill-progress" style="width: 82%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span class="text-sm font-medium">Router/Switch Config</span>
+                                <span class="text-sm text-gray-500">78%</span>
+                            </div>
+                            <div class="bg-gray-200 rounded-full h-2">
+                                <div class="bg-light-blue h-2 rounded-full skill-progress" style="width: 78%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span class="text-sm font-medium">Server Administration</span>
+                                <span class="text-sm text-gray-500">75%</span>
+                            </div>
+                            <div class="bg-gray-200 rounded-full h-2">
+                                <div class="bg-light-blue h-2 rounded-full skill-progress" style="width: 75%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Development & Database -->
+                <div class="bg-gray-50 p-6 rounded-xl card-hover fade-in">
+                    <div class="text-center mb-6">
+                        <i class="fas fa-database text-4xl text-accent mb-4"></i>
+                        <h3 class="text-xl font-semibold text-navy">Development & Database</h3>
+                    </div>
+                    <div class="space-y-4">
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span class="text-sm font-medium">SQL</span>
+                                <span class="text-sm text-gray-500">80%</span>
+                            </div>
+                            <div class="bg-gray-200 rounded-full h-2">
+                                <div class="bg-accent h-2 rounded-full skill-progress" style="width: 80%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span class="text-sm font-medium">Python</span>
+                                <span class="text-sm text-gray-500">70%</span>
+                            </div>
+                            <div class="bg-gray-200 rounded-full h-2">
+                                <div class="bg-accent h-2 rounded-full skill-progress" style="width: 70%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span class="text-sm font-medium">Data Analytics</span>
+                                <span class="text-sm text-gray-500">75%</span>
+                            </div>
+                            <div class="bg-gray-200 rounded-full h-2">
+                                <div class="bg-accent h-2 rounded-full skill-progress" style="width: 75%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Soft Skills -->
+                <div class="bg-gray-50 p-6 rounded-xl card-hover fade-in">
+                    <div class="text-center mb-6">
+                        <i class="fas fa-users text-4xl text-purple-600 mb-4"></i>
+                        <h3 class="text-xl font-semibold text-navy">Soft Skills</h3>
+                    </div>
+                    <div class="space-y-3">
+                        <div class="flex items-center">
+                            <i class="fas fa-check-circle text-accent mr-2"></i>
+                            <span class="text-sm">Communication</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-check-circle text-accent mr-2"></i>
+                            <span class="text-sm">Team Collaboration</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-check-circle text-accent mr-2"></i>
+                            <span class="text-sm">Problem Solving</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-check-circle text-accent mr-2"></i>
+                            <span class="text-sm">Time Management</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-check-circle text-accent mr-2"></i>
+                            <span class="text-sm">Adaptability</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- @END_COMPONENT: SkillsSection -->
+
+    <!-- Projects Showcase -->
+    <!-- @COMPONENT: ProjectsSection -->
+    <section id="projects" class="py-16 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-navy mb-4 fade-in">Featured Projects</h2>
+                <p class="text-lg text-gray-600 max-w-2xl mx-auto fade-in">
+                    Showcasing practical applications of my technical skills and problem-solving abilities
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Project 1: Computer Lab Management System -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden card-hover fade-in">
+                    <!-- A modern computer laboratory with multiple workstations and monitors -->
+                    <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=400" alt="Computer lab management interface" class="w-full h-48 object-cover" data-mock="true" />
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-navy mb-3">Computer Lab Management System</h3>
+                        <p class="text-gray-600 mb-4" data-mock="true">
+                            Developed an automated monitoring system for 50+ lab computers, reducing maintenance time by 30% and improving overall uptime.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="bg-navy text-white px-3 py-1 rounded-full text-sm">Windows Server</span>
+                            <span class="bg-light-blue text-white px-3 py-1 rounded-full text-sm">PowerShell</span>
+                            <span class="bg-accent text-white px-3 py-1 rounded-full text-sm">SQL</span>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <span class="text-sm text-gray-500">Jan 2025 - April 2025</span>
+                            <button class="text-navy hover:text-light-blue transition-colors" data-implementation="Link to project details">
+                                <i class="fas fa-external-link-alt"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 2: Network Infrastructure Optimization -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden card-hover fade-in">
+                    <!-- A network server room with cables and networking equipment -->
+                    <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=400" alt="Network infrastructure setup" class="w-full h-48 object-cover" data-mock="true" />
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-navy mb-3">Network Infrastructure Optimization</h3>
+                        <p class="text-gray-600 mb-4" data-mock="true">
+                            Configured and optimized network infrastructure for 6 computer labs, improving connectivity and reducing downtime by 20%.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="bg-navy text-white px-3 py-1 rounded-full text-sm">Cisco</span>
+                            <span class="bg-light-blue text-white px-3 py-1 rounded-full text-sm">Network Config</span>
+                            <span class="bg-accent text-white px-3 py-1 rounded-full text-sm">LAN/WAN</span>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <span class="text-sm text-gray-500">Ongoing Project</span>
+                            <button class="text-navy hover:text-light-blue transition-colors" data-implementation="Link to project details">
+                                <i class="fas fa-external-link-alt"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 3: IT Documentation System -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden card-hover fade-in">
+                    <!-- A person working on documentation with charts and graphs -->
+                    <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=400" alt="Documentation and reporting system" class="w-full h-48 object-cover" data-mock="true" />
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-navy mb-3">IT Documentation & Reporting System</h3>
+                        <p class="text-gray-600 mb-4" data-mock="true">
+                            Created comprehensive documentation system and automated reporting tools to improve knowledge sharing and team efficiency.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="bg-navy text-white px-3 py-1 rounded-full text-sm">Python</span>
+                            <span class="bg-light-blue text-white px-3 py-1 rounded-full text-sm">Excel VBA</span>
+                            <span class="bg-accent text-white px-3 py-1 rounded-full text-sm">Analytics</span>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <span class="text-sm text-gray-500">Completed</span>
+                            <button class="text-navy hover:text-light-blue transition-colors" data-implementation="Link to project details">
+                                <i class="fas fa-external-link-alt"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- @END_COMPONENT: ProjectsSection -->
+
+    <!-- Experience Section -->
+    <!-- @COMPONENT: ExperienceSection -->
+    <section id="experience" class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-navy mb-4 fade-in">Professional Experience</h2>
+                <p class="text-lg text-gray-600 max-w-2xl mx-auto fade-in">
+                    Building expertise through hands-on experience in IT infrastructure and technical support
+                </p>
+            </div>
+            
+            <div class="max-w-4xl mx-auto">
+                <div class="relative">
+                    <!-- Timeline line -->
+                    <div class="absolute left-8 top-0 bottom-0 w-0.5 bg-navy"></div>
+                    
+                    <!-- Experience Item -->
+                    <div class="relative flex items-start mb-12 fade-in">
+                        <div class="flex-shrink-0 w-16 h-16 bg-navy rounded-full flex items-center justify-center text-white z-10">
+                            <i class="fas fa-laptop text-xl"></i>
+                        </div>
+                        <div class="ml-8 bg-gray-50 p-6 rounded-xl flex-1">
+                            <div class="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
+                                <div>
+                                    <h3 class="text-xl font-semibold text-navy">Technical Support Intern</h3>
+                                    <p class="text-lg text-gray-700">University of Cabuyao - Management Information System Dept.</p>
+                                    <p class="text-gray-600">Cabuyao City, Laguna</p>
+                                </div>
+                                <div class="mt-2 md:mt-0">
+                                    <span class="bg-navy text-white px-4 py-2 rounded-full text-sm">Jan 2025 - April 2025</span>
+                                </div>
+                            </div>
+                            
+                            <div class="space-y-3">
+                                <div class="flex items-start">
+                                    <i class="fas fa-check-circle text-accent mt-1 mr-3 flex-shrink-0"></i>
+                                    <p class="text-gray-700">Monitored and maintained performance of <strong>50+ lab computers</strong> and peripheral devices</p>
+                                </div>
+                                <div class="flex items-start">
+                                    <i class="fas fa-check-circle text-accent mt-1 mr-3 flex-shrink-0"></i>
+                                    <p class="text-gray-700">Resolved <strong>15+ daily technical issues</strong>, improving uptime and productivity</p>
+                                </div>
+                                <div class="flex items-start">
+                                    <i class="fas fa-check-circle text-accent mt-1 mr-3 flex-shrink-0"></i>
+                                    <p class="text-gray-700">Installed, configured, and standardized setups, reducing reconfiguration time by <strong>30%</strong></p>
+                                </div>
+                                <div class="flex items-start">
+                                    <i class="fas fa-check-circle text-accent mt-1 mr-3 flex-shrink-0"></i>
+                                    <p class="text-gray-700">Conducted preventive maintenance, cutting downtime by <strong>20%</strong></p>
+                                </div>
+                                <div class="flex items-start">
+                                    <i class="fas fa-check-circle text-accent mt-1 mr-3 flex-shrink-0"></i>
+                                    <p class="text-gray-700">Prepared comprehensive documentation and reports, improving knowledge sharing</p>
+                                </div>
+                                <div class="flex items-start">
+                                    <i class="fas fa-check-circle text-accent mt-1 mr-3 flex-shrink-0"></i>
+                                    <p class="text-gray-700">Collaborated with IT team to successfully upgrade <strong>6 computer labs</strong></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- @END_COMPONENT: ExperienceSection -->
+
+    <!-- Education Section -->
+    <!-- @COMPONENT: EducationSection -->
+    <section id="education" class="py-16 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-navy mb-4 fade-in">Education</h2>
+                <p class="text-lg text-gray-600 max-w-2xl mx-auto fade-in">
+                    Strong academic foundation in Information Technology and related fields
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+                <!-- Bachelor's Degree -->
+                <div class="bg-white p-8 rounded-xl shadow-lg card-hover fade-in">
+                    <div class="text-center mb-6">
+                        <i class="fas fa-graduation-cap text-5xl text-navy mb-4"></i>
+                        <h3 class="text-xl font-semibold text-navy">Bachelor's Degree</h3>
+                    </div>
+                    <div class="space-y-3">
+                        <div>
+                            <p class="font-semibold text-gray-800">Bachelor of Science in Information Technology</p>
+                            <p class="text-gray-600">University of Cabuyao – Pamantasan ng Cabuyao</p>
+                            <p class="text-gray-500">2021 - 2025</p>
+                        </div>
+                        <div class="pt-4">
+                            <p class="text-sm text-gray-700 font-medium mb-2">Relevant Coursework:</p>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="bg-navy text-white px-3 py-1 rounded-full text-xs">System Administration</span>
+                                <span class="bg-light-blue text-white px-3 py-1 rounded-full text-xs">Network Security</span>
+                                <span class="bg-accent text-white px-3 py-1 rounded-full text-xs">Database Management</span>
+                                <span class="bg-purple-600 text-white px-3 py-1 rounded-full text-xs">Software Engineering</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Senior High School -->
+                <div class="bg-white p-8 rounded-xl shadow-lg card-hover fade-in">
+                    <div class="text-center mb-6">
+                        <i class="fas fa-school text-5xl text-light-blue mb-4"></i>
+                        <h3 class="text-xl font-semibold text-navy">Senior High School</h3>
+                    </div>
+                    <div class="space-y-3">
+                        <div>
+                            <p class="font-semibold text-gray-800">Information and Communication Technology (ICT) Strand</p>
+                            <p class="text-gray-600">St. Ignatius Academy - Cabuyao Campus</p>
+                            <p class="text-gray-500">2019 - 2021</p>
+                        </div>
+                        <div class="pt-4">
+                            <p class="text-sm text-gray-700 font-medium mb-2">Specialized in:</p>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="bg-navy text-white px-3 py-1 rounded-full text-xs">Computer Programming</span>
+                                <span class="bg-light-blue text-white px-3 py-1 rounded-full text-xs">Web Development</span>
+                                <span class="bg-accent text-white px-3 py-1 rounded-full text-xs">Digital Media</span>
+                                <span class="bg-purple-600 text-white px-3 py-1 rounded-full text-xs">Technical Support</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- @END_COMPONENT: EducationSection -->
+
+    <!-- Certifications Section -->
+    <!-- @COMPONENT: CertificationsSection -->
+    <section class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-navy mb-4 fade-in">Certifications & Training</h2>
+                <p class="text-lg text-gray-600 max-w-2xl mx-auto fade-in">
+                    Continuous learning through industry-recognized certifications and professional development
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                <!-- Google Analytics Certification -->
+                <div class="bg-gradient-to-br from-blue-50 to-indigo-50 p-8 rounded-xl border border-blue-200 card-hover fade-in">
+                    <div class="flex items-center mb-6">
+                        <div class="w-16 h-16 bg-blue-600 rounded-lg flex items-center justify-center mr-4">
+                            <i class="fab fa-google text-white text-2xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-semibold text-navy">Google Analytics</h3>
+                            <p class="text-gray-600">by Google Skillshop</p>
+                        </div>
+                    </div>
+                    <div class="space-y-3">
+                        <div class="flex justify-between items-center">
+                            <span class="text-sm font-medium text-gray-700">Certificate ID:</span>
+                            <span class="text-sm text-gray-600 font-mono">140912621</span>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span class="text-sm font-medium text-gray-700">Expiry Date:</span>
+                            <span class="text-sm text-gray-600">April 24, 2026</span>
+                        </div>
+                        <div class="pt-3">
+                            <span class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-xs font-medium">
+                                <i class="fas fa-check-circle mr-1"></i>Active
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Python Data Associate Certification -->
+                <div class="bg-gradient-to-br from-green-50 to-emerald-50 p-8 rounded-xl border border-green-200 card-hover fade-in">
+                    <div class="flex items-center mb-6">
+                        <div class="w-16 h-16 bg-green-600 rounded-lg flex items-center justify-center mr-4">
+                            <i class="fab fa-python text-white text-2xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-semibold text-navy">Python Data Associate</h3>
+                            <p class="text-gray-600">by DataCamp</p>
+                        </div>
+                    </div>
+                    <div class="space-y-3">
+                        <div class="flex justify-between items-center">
+                            <span class="text-sm font-medium text-gray-700">Certificate ID:</span>
+                            <span class="text-sm text-gray-600 font-mono">PDA0011846898662</span>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span class="text-sm font-medium text-gray-700">Expiry Date:</span>
+                            <span class="text-sm text-gray-600">April 25, 2027</span>
+                        </div>
+                        <div class="pt-3">
+                            <span class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-xs font-medium">
+                                <i class="fas fa-check-circle mr-1"></i>Active
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- @END_COMPONENT: CertificationsSection -->
+
+    <!-- Case Studies Section -->
+    <!-- @COMPONENT: CaseStudiesSection -->
+    <section class="py-16 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-navy mb-4 fade-in">Problem-Solving Case Studies</h2>
+                <p class="text-lg text-gray-600 max-w-2xl mx-auto fade-in">
+                    Real-world challenges and solutions demonstrating technical expertise and problem-solving abilities
+                </p>
+            </div>
+            
+            <div class="grid lg:grid-cols-2 gap-8">
+                <!-- Case Study 1 -->
+                <div class="bg-white p-8 rounded-xl shadow-lg card-hover fade-in">
+                    <div class="mb-6">
+                        <h3 class="text-xl font-semibold text-navy mb-2">Reducing System Downtime in Computer Labs</h3>
+                        <div class="flex items-center space-x-4 text-sm text-gray-500">
+                            <span><i class="fas fa-clock mr-1"></i>Duration: 3 months</span>
+                            <span><i class="fas fa-desktop mr-1"></i>50+ Computers</span>
+                        </div>
+                    </div>
+                    
+                    <div class="space-y-6">
+                        <!-- Situation -->
+                        <div class="border-l-4 border-red-400 pl-4">
+                            <h4 class="font-semibold text-red-700 mb-2">Situation</h4>
+                            <p class="text-gray-700 text-sm">Computer labs experienced frequent system failures and prolonged downtime, affecting 200+ students daily and disrupting academic schedules.</p>
+                        </div>
+                        
+                        <!-- Action -->
+                        <div class="border-l-4 border-blue-400 pl-4">
+                            <h4 class="font-semibold text-blue-700 mb-2">Action</h4>
+                            <p class="text-gray-700 text-sm">Implemented comprehensive monitoring system, standardized computer configurations, and established preventive maintenance protocols across all 6 labs.</p>
+                        </div>
+                        
+                        <!-- Result -->
+                        <div class="border-l-4 border-green-400 pl-4">
+                            <h4 class="font-semibold text-green-700 mb-2">Result</h4>
+                            <p class="text-gray-700 text-sm">Achieved 20% reduction in downtime, 30% faster issue resolution, and improved student satisfaction scores by 25%.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Case Study 2 -->
+                <div class="bg-white p-8 rounded-xl shadow-lg card-hover fade-in">
+                    <div class="mb-6">
+                        <h3 class="text-xl font-semibold text-navy mb-2">Streamlining IT Documentation Process</h3>
+                        <div class="flex items-center space-x-4 text-sm text-gray-500">
+                            <span><i class="fas fa-clock mr-1"></i>Duration: 2 months</span>
+                            <span><i class="fas fa-users mr-1"></i>10+ Team Members</span>
+                        </div>
+                    </div>
+                    
+                    <div class="space-y-6">
+                        <!-- Situation -->
+                        <div class="border-l-4 border-red-400 pl-4">
+                            <h4 class="font-semibold text-red-700 mb-2">Situation</h4>
+                            <p class="text-gray-700 text-sm">IT team struggled with inconsistent documentation practices, leading to knowledge gaps and inefficient troubleshooting processes.</p>
+                        </div>
+                        
+                        <!-- Action -->
+                        <div class="border-l-4 border-blue-400 pl-4">
+                            <h4 class="font-semibold text-blue-700 mb-2">Action</h4>
+                            <p class="text-gray-700 text-sm">Developed standardized documentation templates, created automated reporting systems, and trained team members on new procedures.</p>
+                        </div>
+                        
+                        <!-- Result -->
+                        <div class="border-l-4 border-green-400 pl-4">
+                            <h4 class="font-semibold text-green-700 mb-2">Result</h4>
+                            <p class="text-gray-700 text-sm">Improved knowledge sharing efficiency by 40%, reduced training time for new team members by 50%, and enhanced overall team productivity.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- @END_COMPONENT: CaseStudiesSection -->
+
+    <!-- Testimonials Section -->
+    <!-- @COMPONENT: TestimonialsSection -->
+    <section class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-navy mb-4 fade-in">What Others Say</h2>
+                <p class="text-lg text-gray-600 max-w-2xl mx-auto fade-in">
+                    Feedback from supervisors and colleagues highlighting professional capabilities
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+                <!-- Testimonial 1 -->
+                <div class="bg-gray-50 p-8 rounded-xl relative card-hover fade-in" data-mock="true">
+                    <div class="absolute top-4 left-4 text-4xl text-navy opacity-20">
+                        <i class="fas fa-quote-left"></i>
+                    </div>
+                    <div class="relative z-10">
+                        <p class="text-gray-700 mb-6 italic">
+                            "Rey-Ann demonstrated exceptional technical skills and professionalism during the internship. 
+                            The systematic approach to problem-solving and attention to detail significantly improved our lab operations."
+                        </p>
+                        <div class="flex items-center">
+                            <div class="w-12 h-12 bg-navy rounded-full flex items-center justify-center mr-4">
+                                <span class="text-white font-semibold">AQ</span>
+                            </div>
+                            <div>
+                                <p class="font-semibold text-navy">Arcelito Quiatchon</p>
+                                <p class="text-gray-600 text-sm">Department Chair, University of Cabuyao</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Testimonial 2 -->
+                <div class="bg-gray-50 p-8 rounded-xl relative card-hover fade-in" data-mock="true">
+                    <div class="absolute top-4 left-4 text-4xl text-navy opacity-20">
+                        <i class="fas fa-quote-left"></i>
+                    </div>
+                    <div class="relative z-10">
+                        <p class="text-gray-700 mb-6 italic">
+                            "Working with Rey-Ann has been a pleasure. The dedication to continuous learning and 
+                            ability to adapt quickly to new technologies makes for an excellent IT professional."
+                        </p>
+                        <div class="flex items-center">
+                            <div class="w-12 h-12 bg-navy rounded-full flex items-center justify-center mr-4">
+                                <span class="text-white font-semibold">JL</span>
+                            </div>
+                            <div>
+                                <p class="font-semibold text-navy">Jocelyn G. Llanderal, MIT</p>
+                                <p class="text-gray-600 text-sm">Instructor III, City College of Calamba</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- @END_COMPONENT: TestimonialsSection -->
+
+    <!-- Contact Section -->
+    <!-- @COMPONENT: ContactSection -->
+    <section id="contact" class="py-16 bg-navy text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4 fade-in">Get In Touch</h2>
+                <p class="text-lg text-blue-200 max-w-2xl mx-auto fade-in">
+                    Ready to collaborate or discuss opportunities? I'd love to hear from you.
+                </p>
+            </div>
+            
+            <div class="grid lg:grid-cols-2 gap-12">
+                <!-- Contact Information -->
+                <div class="fade-in">
+                    <h3 class="text-2xl font-semibold mb-8">Contact Information</h3>
+                    <div class="space-y-6">
+                        <div class="flex items-center">
+                            <div class="w-12 h-12 bg-light-blue rounded-lg flex items-center justify-center mr-4">
+                                <i class="fas fa-envelope text-white"></i>
+                            </div>
+                            <div>
+                                <p class="font-medium">Email</p>
+                                <a href="mailto:reyann.rongavilla@gmail.com" class="text-blue-200 hover:text-white transition-colors">
+                                    reyann.rongavilla@gmail.com
+                                </a>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-center">
+                            <div class="w-12 h-12 bg-light-blue rounded-lg flex items-center justify-center mr-4">
+                                <i class="fas fa-phone text-white"></i>
+                            </div>
+                            <div>
+                                <p class="font-medium">Phone</p>
+                                <a href="tel:+639385716420" class="text-blue-200 hover:text-white transition-colors">
+                                    +63 938 571 6420
+                                </a>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-center">
+                            <div class="w-12 h-12 bg-light-blue rounded-lg flex items-center justify-center mr-4">
+                                <i class="fas fa-map-marker-alt text-white"></i>
+                            </div>
+                            <div>
+                                <p class="font-medium">Location</p>
+                                <p class="text-blue-200">Cabuyao City, Laguna, Philippines</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-center">
+                            <div class="w-12 h-12 bg-light-blue rounded-lg flex items-center justify-center mr-4">
+                                <i class="fab fa-linkedin text-white"></i>
+                            </div>
+                            <div>
+                                <p class="font-medium">LinkedIn</p>
+                                <a href="#" class="text-blue-200 hover:text-white transition-colors" data-mock="true">
+                                    linkedin.com/in/reyann-rongavilla
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- QR Code Placeholder -->
+                    <div class="mt-8 p-6 bg-white rounded-lg text-center">
+                        <p class="text-navy font-medium mb-4">Scan to view portfolio</p>
+                        <div class="w-32 h-32 bg-gray-200 rounded-lg mx-auto flex items-center justify-center" data-mock="true">
+                            <i class="fas fa-qrcode text-4xl text-gray-400"></i>
+                        </div>
+                        <p class="text-navy text-sm mt-2" data-mock="true">QR Code to Portfolio</p>
+                    </div>
+                </div>
+                
+                <!-- Contact Form -->
+                <div class="fade-in">
+                    <h3 class="text-2xl font-semibold mb-8">Send a Message</h3>
+                    <form class="space-y-6" data-implementation="Form submission functionality needed">
+                        <div>
+                            <label for="name" class="block text-sm font-medium mb-2">Full Name</label>
+                            <input type="text" id="name" name="name" required 
+                                   class="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-blue-200 focus:outline-none focus:ring-2 focus:ring-light-blue focus:border-transparent"
+                                   placeholder="Your full name">
+                        </div>
+                        
+                        <div>
+                            <label for="email" class="block text-sm font-medium mb-2">Email Address</label>
+                            <input type="email" id="email" name="email" required 
+                                   class="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-blue-200 focus:outline-none focus:ring-2 focus:ring-light-blue focus:border-transparent"
+                                   placeholder="your.email@example.com">
+                        </div>
+                        
+                        <div>
+                            <label for="subject" class="block text-sm font-medium mb-2">Subject</label>
+                            <input type="text" id="subject" name="subject" required 
+                                   class="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-blue-200 focus:outline-none focus:ring-2 focus:ring-light-blue focus:border-transparent"
+                                   placeholder="Message subject">
+                        </div>
+                        
+                        <div>
+                            <label for="message" class="block text-sm font-medium mb-2">Message</label>
+                            <textarea id="message" name="message" rows="5" required 
+                                      class="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-blue-200 focus:outline-none focus:ring-2 focus:ring-light-blue focus:border-transparent resize-none"
+                                      placeholder="Your message here..."></textarea>
+                        </div>
+                        
+                        <button type="submit" 
+                                class="w-full bg-light-blue text-white py-3 px-6 rounded-lg font-semibold hover:bg-blue-600 transition-colors focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-offset-2 focus:ring-offset-navy">
+                            Send Message
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- @END_COMPONENT: ContactSection -->
+
+    <!-- Footer -->
+    <!-- @COMPONENT: Footer -->
+    <footer class="bg-gray-900 text-gray-300 py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-4 md:mb-0">
+                    <h3 class="text-xl font-bold text-white mb-2">Rey-Ann Rongavilla</h3>
+                    <p class="text-gray-400">IT Professional & System Administrator</p>
+                </div>
+                
+                <div class="flex flex-col sm:flex-row items-center space-y-4 sm:space-y-0 sm:space-x-6">
+                    <a href="#" class="flex items-center text-gray-300 hover:text-white transition-colors" data-mock="true">
+                        <i class="fas fa-download mr-2"></i>
+                        Download Resume
+                    </a>
+                    
+                    <div class="flex space-x-4">
+                        <a href="mailto:reyann.rongavilla@gmail.com" class="text-gray-400 hover:text-white transition-colors">
+                            <i class="fas fa-envelope text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors" data-mock="true">
+                            <i class="fab fa-linkedin text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors" data-mock="true">
+                            <i class="fab fa-github text-xl"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center">
+                <p class="text-gray-400">
+                    &copy; 2025 Rey-Ann Rongavilla. All rights reserved.
+                </p>
+            </div>
+        </div>
+    </footer>
+    <!-- @END_COMPONENT: Footer -->
+
+    <script>
+        (function() {
+            // Mobile menu toggle
+            const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+            const mobileMenu = document.getElementById('mobile-menu');
+            
+            mobileMenuBtn.addEventListener('click', function() {
+                mobileMenu.classList.toggle('hidden');
+            });
+
+            // Smooth scrolling for navigation links
+            const navLinks = document.querySelectorAll('nav a[href^="#"]');
+            navLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const targetId = this.getAttribute('href');
+                    const targetSection = document.querySelector(targetId);
+                    if (targetSection) {
+                        targetSection.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                        // Close mobile menu if open
+                        mobileMenu.classList.add('hidden');
+                    }
+                });
+            });
+
+            // Intersection Observer for fade-in animations
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            };
+
+            const observer = new IntersectionObserver(function(entries) {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                    }
+                });
+            }, observerOptions);
+
+            // Observe all fade-in elements
+            const fadeElements = document.querySelectorAll('.fade-in');
+            fadeElements.forEach(el => observer.observe(el));
+
+            // Animate skill progress bars when they come into view
+            const skillProgressBars = document.querySelectorAll('.skill-progress');
+            const skillObserver = new IntersectionObserver(function(entries) {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const progressBar = entry.target;
+                        const width = progressBar.style.width;
+                        progressBar.style.width = '0%';
+                        setTimeout(() => {
+                            progressBar.style.width = width;
+                        }, 200);
+                        skillObserver.unobserve(progressBar);
+                    }
+                });
+            }, observerOptions);
+
+            skillProgressBars.forEach(bar => skillObserver.observe(bar));
+
+            // Form submission handling (placeholder)
+            const contactForm = document.querySelector('form');
+            contactForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                // TODO: Implement form submission logic
+                alert('Thank you for your message! I will get back to you soon.');
+                this.reset();
+            });
+
+            // Add active state to navigation based on scroll position
+            window.addEventListener('scroll', function() {
+                const sections = document.querySelectorAll('section[id]');
+                const navLinks = document.querySelectorAll('nav a[href^="#"]');
+                
+                let current = '';
+                sections.forEach(section => {
+                    const sectionTop = section.getBoundingClientRect().top;
+                    if (sectionTop <= 100) {
+                        current = section.getAttribute('id');
+                    }
+                });
+
+                navLinks.forEach(link => {
+                    link.classList.remove('text-navy');
+                    if (link.getAttribute('href') === '#' + current) {
+                        link.classList.add('text-navy');
+                    }
+                });
+            });
+        })();
+    </script>
+</body>
+</html>
