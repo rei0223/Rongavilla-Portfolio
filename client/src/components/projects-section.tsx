@@ -36,7 +36,7 @@ const projectsData = [
     title: "E-Commerce Platform",
     description: "Full-featured online shopping platform with product catalog, shopping cart, user authentication, and comprehensive order management system.",
     image: ecommerceImage,
-    technologies: ["HTML", "CSS", "JavaScript", "PHP"],
+    technologies: ["Django", "Python", "Vue.js"],
     period: "Web Development Project",
   },
 ];
@@ -51,6 +51,9 @@ const technologyColors: { [key: string]: string } = {
   "Java Swing": "bg-red-500 text-white",
   "C#": "bg-green-600 text-white",
   "Windows Forms": "bg-gray-600 text-white",
+  "Django": "bg-green-700 text-white",
+  "Python": "bg-blue-700 text-white",
+  "Vue.js": "bg-green-500 text-white",
 };
 
 export default function ProjectsSection() {
@@ -88,45 +91,43 @@ export default function ProjectsSection() {
               initial={{ opacity: 0, y: 20 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.6, delay: index * 0.1 }}
-              className="bg-white rounded-lg overflow-hidden card-minimal"
+              className="bg-white rounded-2xl overflow-hidden card-minimal shadow-sm border border-gray-100 group"
               data-testid={`project-card-${project.title.toLowerCase().replace(/[^a-z]/g, '-')}`}
             >
-              <img
-                src={project.image}
-                alt={project.title}
-                className="w-full h-48 object-cover"
-                data-testid={`project-image-${index}`}
-              />
-              <div className="p-6">
-                <h3 className="text-lg font-medium text-navy mb-3" data-testid={`project-title-${index}`}>
+              <div className="relative overflow-hidden">
+                <img
+                  src={project.image}
+                  alt={project.title}
+                  className="w-full h-56 object-cover transition-transform duration-300 group-hover:scale-105"
+                  data-testid={`project-image-${index}`}
+                />
+                <div className="absolute top-4 right-4 bg-white/90 backdrop-blur-sm rounded-lg px-3 py-1">
+                  <span className="text-xs font-medium text-gray-700">{project.period}</span>
+                </div>
+              </div>
+              <div className="p-8">
+                <h3 className="text-xl font-medium text-navy mb-4" data-testid={`project-title-${index}`}>
                   {project.title}
                 </h3>
-                <p className="text-gray-500 text-sm mb-6 leading-relaxed" data-testid={`project-description-${index}`}>
+                <p className="text-gray-600 text-sm mb-6 leading-relaxed" data-testid={`project-description-${index}`}>
                   {project.description}
                 </p>
-                <div className="flex flex-wrap gap-2 mb-6">
+                <div className="flex flex-wrap gap-3 mb-6">
                   {project.technologies.map((tech) => (
                     <span
                       key={tech}
-                      className="px-3 py-1 rounded-full text-xs bg-gray-100 text-gray-600 font-medium"
+                      className="px-4 py-2 rounded-full text-xs bg-gray-50 text-gray-700 border border-gray-200 font-medium"
                       data-testid={`tech-tag-${tech.toLowerCase().replace(/[^a-z]/g, '-')}`}
                     >
                       {tech}
                     </span>
                   ))}
                 </div>
-                <div className="flex items-center justify-between">
-                  <span className="text-xs text-gray-400" data-testid={`project-period-${index}`}>
+                <div className="flex items-center justify-between pt-4 border-t border-gray-100">
+                  <span className="text-xs text-gray-400 font-medium" data-testid={`project-period-${index}`}>
                     {project.period}
                   </span>
-                  <Button
-                    variant="ghost"
-                    size="sm"
-                    className="text-navy hover:text-navy-light p-1"
-                    data-testid={`project-link-${index}`}
-                  >
-                    <ExternalLink className="w-4 h-4" />
-                  </Button>
+                  <ExternalLink className="w-4 h-4 text-gray-300 group-hover:text-navy transition-colors duration-200" />
                 </div>
               </div>
             </motion.div>

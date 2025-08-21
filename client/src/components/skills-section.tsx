@@ -22,10 +22,12 @@ const skillsData = [
     color: "text-light-blue",
     bgColor: "bg-light-blue",
     skills: [
-      { name: "React/TypeScript", level: 85 },
-      { name: "Node.js/Express", level: 80 },
-      { name: "Database Design", level: 82 },
-      { name: "API Development", level: 78 },
+      { name: "HTML/CSS/JavaScript", level: 88 },
+      { name: "PHP & MySQL", level: 85 },
+      { name: "Java & Java Swing", level: 82 },
+      { name: "C# & Windows Forms", level: 80 },
+      { name: "Django & Python", level: 78 },
+      { name: "Vue.js", level: 75 },
     ],
   },
   {
