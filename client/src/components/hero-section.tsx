@@ -32,14 +32,13 @@ export default function HeroSection() {
                 className="text-lg sm:text-xl lg:text-2xl text-white/80 font-light"
                 data-testid="hero-title"
               >
-                Full-Stack IT Professional | Hardware & Software Specialist
+                Fresh Graduate | Aspiring IT Support Specialist & Software Developer
               </h2>
               <p
                 className="text-base sm:text-lg text-white/70 max-w-xl text-balance leading-relaxed"
                 data-testid="hero-description"
               >
-                BSIT graduate with comprehensive expertise in both hardware solutions and software development. 
-                From PC building and network infrastructure to web development and system programming.
+                Recent BSIT graduate eager to learn and contribute to the IT field. Passionate about both hardware troubleshooting and software development, with hands-on experience in PC building, system configuration, and developing web applications using modern technologies.
               </p>
             </motion.div>
             <motion.div
