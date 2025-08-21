@@ -88,7 +88,7 @@ export default function ContactSection() {
   ];
 
   return (
-    <section id="contact" className="section-padding gradient-minimal text-white" ref={ref}>
+    <section id="contact" className="section-padding bg-gray-50 text-gray-800" ref={ref}>
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-20">
           <motion.h2
@@ -104,7 +104,7 @@ export default function ContactSection() {
             initial={{ opacity: 0, y: 20 }}
             animate={isInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.6, delay: 0.1 }}
-            className="text-white/70 max-w-2xl mx-auto leading-relaxed"
+            className="text-gray-600 max-w-2xl mx-auto leading-relaxed"
             data-testid="contact-description"
           >
             Ready to collaborate or discuss opportunities? I'd love to hear from you.
@@ -118,25 +118,25 @@ export default function ContactSection() {
             animate={isInView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.6, delay: 0.4 }}
           >
-            <h3 className="text-2xl font-semibold mb-8">Contact Information</h3>
+            <h3 className="text-2xl font-light text-gray-800 mb-8">Contact Information</h3>
             <div className="space-y-6">
               {contactInfo.map((contact, index) => (
                 <div key={contact.label} className="flex items-center" data-testid={`contact-info-${contact.label.toLowerCase()}`}>
-                  <div className="w-12 h-12 bg-light-blue rounded-lg flex items-center justify-center mr-4">
+                  <div className="w-12 h-12 bg-accent rounded-lg flex items-center justify-center mr-4">
                     <contact.icon className="w-5 h-5 text-white" />
                   </div>
                   <div>
-                    <p className="font-medium">{contact.label}</p>
+                    <p className="font-medium text-gray-800">{contact.label}</p>
                     {contact.href ? (
                       <a
                         href={contact.href}
-                        className="text-blue-200 hover:text-white transition-colors"
+                        className="text-accent hover:text-accent/80 transition-colors"
                         data-testid={`contact-link-${contact.label.toLowerCase()}`}
                       >
                         {contact.value}
                       </a>
                     ) : (
-                      <p className="text-blue-200">{contact.value}</p>
+                      <p className="text-gray-600">{contact.value}</p>
                     )}
                   </div>
                 </div>
@@ -144,12 +144,12 @@ export default function ContactSection() {
             </div>
 
             {/* QR Code Placeholder */}
-            <div className="mt-8 p-6 bg-white/10 rounded-lg text-center border border-white/20">
-              <p className="text-white/80 font-medium mb-4">Scan to view portfolio</p>
-              <div className="w-24 h-24 bg-white/10 rounded-lg mx-auto flex items-center justify-center" data-testid="qr-code-placeholder">
-                <QrCode className="w-12 h-12 text-white/40" />
+            <div className="mt-8 p-6 bg-white rounded-xl text-center border border-gray-200 shadow-sm">
+              <p className="text-gray-700 font-medium mb-4">Scan to view portfolio</p>
+              <div className="w-24 h-24 bg-gray-100 rounded-lg mx-auto flex items-center justify-center" data-testid="qr-code-placeholder">
+                <QrCode className="w-12 h-12 text-gray-400" />
               </div>
-              <p className="text-white/60 text-sm mt-2">QR Code to Portfolio</p>
+              <p className="text-gray-500 text-sm mt-2">QR Code to Portfolio</p>
             </div>
           </motion.div>
 
@@ -159,7 +159,7 @@ export default function ContactSection() {
             animate={isInView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.6, delay: 0.6 }}
           >
-            <h3 className="text-2xl font-semibold mb-8">Send a Message</h3>
+            <h3 className="text-2xl font-light text-gray-800 mb-8">Send a Message</h3>
             <Form {...form}>
               <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6" data-testid="contact-form">
                 <FormField
@@ -167,12 +167,12 @@ export default function ContactSection() {
                   name="name"
                   render={({ field }) => (
                     <FormItem>
-                      <FormLabel className="text-white">Full Name</FormLabel>
+                      <FormLabel className="text-gray-700">Full Name</FormLabel>
                       <FormControl>
                         <Input
                           placeholder="Your full name"
                           {...field}
-                          className="bg-white/10 border-white/20 text-white placeholder-blue-200 focus:ring-light-blue focus:border-transparent"
+                          className="bg-white border-gray-200 text-gray-800 placeholder-gray-400 focus:ring-accent focus:border-accent rounded-xl"
                           data-testid="input-name"
                         />
                       </FormControl>
@@ -186,13 +186,13 @@ export default function ContactSection() {
                   name="email"
                   render={({ field }) => (
                     <FormItem>
-                      <FormLabel className="text-white">Email Address</FormLabel>
+                      <FormLabel className="text-gray-700">Email Address</FormLabel>
                       <FormControl>
                         <Input
                           type="email"
                           placeholder="your.email@example.com"
                           {...field}
-                          className="bg-white/10 border-white/20 text-white placeholder-blue-200 focus:ring-light-blue focus:border-transparent"
+                          className="bg-white border-gray-200 text-gray-800 placeholder-gray-400 focus:ring-accent focus:border-accent rounded-xl"
                           data-testid="input-email"
                         />
                       </FormControl>
@@ -206,12 +206,12 @@ export default function ContactSection() {
                   name="subject"
                   render={({ field }) => (
                     <FormItem>
-                      <FormLabel className="text-white">Subject</FormLabel>
+                      <FormLabel className="text-gray-700">Subject</FormLabel>
                       <FormControl>
                         <Input
                           placeholder="Message subject"
                           {...field}
-                          className="bg-white/10 border-white/20 text-white placeholder-blue-200 focus:ring-light-blue focus:border-transparent"
+                          className="bg-white border-gray-200 text-gray-800 placeholder-gray-400 focus:ring-accent focus:border-accent rounded-xl"
                           data-testid="input-subject"
                         />
                       </FormControl>

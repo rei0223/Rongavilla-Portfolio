@@ -27,7 +27,7 @@ export default function Navigation() {
     <nav className="fixed top-0 w-full z-50 navbar-blur" data-testid="navigation">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center py-6">
-          <div className="text-lg font-medium text-navy" data-testid="brand-name">
+          <div className="text-lg font-medium text-gray-800" data-testid="brand-name">
             Rey-Ann Rongavilla
           </div>
 
@@ -37,7 +37,7 @@ export default function Navigation() {
               <button
                 key={item.label}
                 onClick={() => handleNavClick(item.href)}
-                className="text-sm font-medium text-gray-600 hover:text-navy transition-colors duration-200"
+                className="text-sm font-medium text-gray-600 hover:text-accent transition-colors duration-200"
                 data-testid={`nav-link-${item.label.toLowerCase()}`}
               >
                 {item.label}

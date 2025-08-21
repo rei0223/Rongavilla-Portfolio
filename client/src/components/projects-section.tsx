@@ -61,14 +61,14 @@ export default function ProjectsSection() {
   const isInView = useInView(ref, { once: true });
 
   return (
-    <section id="projects" className="section-padding bg-white" ref={ref}>
+    <section id="projects" className="section-padding bg-gradient-to-b from-white to-gray-50" ref={ref}>
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-20">
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
             animate={isInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.6 }}
-            className="text-2xl sm:text-3xl font-light text-navy mb-6 text-balance"
+            className="text-2xl sm:text-3xl font-light text-gray-800 mb-6 text-balance"
             data-testid="projects-title"
           >
             Featured Projects
@@ -106,7 +106,7 @@ export default function ProjectsSection() {
                 </div>
               </div>
               <div className="p-8">
-                <h3 className="text-xl font-medium text-navy mb-4" data-testid={`project-title-${index}`}>
+                <h3 className="text-xl font-medium text-gray-800 mb-4" data-testid={`project-title-${index}`}>
                   {project.title}
                 </h3>
                 <p className="text-gray-600 text-sm mb-6 leading-relaxed" data-testid={`project-description-${index}`}>
@@ -127,7 +127,7 @@ export default function ProjectsSection() {
                   <span className="text-xs text-gray-400 font-medium" data-testid={`project-period-${index}`}>
                     {project.period}
                   </span>
-                  <ExternalLink className="w-4 h-4 text-gray-300 group-hover:text-navy transition-colors duration-200" />
+                  <ExternalLink className="w-4 h-4 text-gray-300 group-hover:text-accent transition-colors duration-200" />
                 </div>
               </div>
             </motion.div>

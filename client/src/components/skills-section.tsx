@@ -62,14 +62,14 @@ export default function SkillsSection() {
   const isInView = useInView(ref, { once: true });
 
   return (
-    <section id="skills" className="section-padding bg-gray-50" ref={ref}>
+    <section id="skills" className="section-padding bg-white" ref={ref}>
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-20">
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
             animate={isInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.6 }}
-            className="text-2xl sm:text-3xl font-light text-navy mb-6 text-balance"
+            className="text-2xl sm:text-3xl font-light text-gray-800 mb-6 text-balance"
             data-testid="skills-title"
           >
             Skills & Expertise
@@ -92,7 +92,7 @@ export default function SkillsSection() {
               initial={{ opacity: 0, y: 20 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.6, delay: index * 0.1 }}
-              className="bg-white p-8 rounded-lg card-minimal"
+              className="bg-gray-50 p-8 rounded-2xl card-minimal border border-gray-100"
               data-testid={`skill-category-${category.title.toLowerCase().replace(/[^a-z]/g, '-')}`}
             >
               <div className="text-center mb-8">
