@@ -31,14 +31,14 @@ export default function HeroSection() {
                 className="text-lg sm:text-xl lg:text-2xl text-white/80 font-light"
                 data-testid="hero-title"
               >
-                IT Infrastructure Specialist & System Administrator
+                Full-Stack IT Professional | Hardware & Software Specialist
               </h2>
               <p
                 className="text-base sm:text-lg text-white/70 max-w-xl text-balance leading-relaxed"
                 data-testid="hero-description"
               >
-                Recent BSIT graduate with hands-on experience in IT infrastructure support, system monitoring, and troubleshooting. 
-                Passionate about optimizing operational efficiency through innovative technical solutions.
+                BSIT graduate with comprehensive expertise in both hardware solutions and software development. 
+                From PC building and network infrastructure to web development and system programming.
               </p>
             </motion.div>
             <motion.div
