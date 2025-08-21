@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { User } from "lucide-react";
+import profileImage from "@assets/490989181_1316131402821498_6105561555245170207_n_1755794161001.jpg";
 
 export default function HeroSection() {
   const handleNavClick = (href: string) => {
@@ -71,10 +72,13 @@ export default function HeroSection() {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="lg:w-1/2 flex justify-center"
           >
-            <div className="w-64 h-64 sm:w-80 sm:h-80 bg-white/5 rounded-2xl flex items-center justify-center border border-white/10">
-              <div className="w-56 h-56 sm:w-72 sm:h-72 bg-white/10 rounded-xl flex items-center justify-center" data-testid="profile-photo-placeholder">
-                <User className="w-24 h-24 sm:w-32 sm:h-32 text-white/40" />
-              </div>
+            <div className="w-64 h-64 sm:w-80 sm:h-80 bg-white/10 rounded-2xl p-4 border border-white/20">
+              <img 
+                src={profileImage} 
+                alt="Rey-Ann Rongavilla - Professional graduation photo"
+                className="w-full h-full object-cover rounded-xl shadow-lg"
+                data-testid="profile-photo"
+              />
             </div>
           </motion.div>
         </div>

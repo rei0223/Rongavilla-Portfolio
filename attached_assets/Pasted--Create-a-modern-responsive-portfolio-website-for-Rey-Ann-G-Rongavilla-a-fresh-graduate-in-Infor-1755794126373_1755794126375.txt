@@ -1,0 +1,33 @@
+*"Create a modern, responsive portfolio website for Rey-Ann G. Rongavilla, a fresh graduate in Information Technology. The design should be simple, professional, and approachable, using a navy blue, white, and subtle accent color palette.
+
+The portfolio should showcase my potential as a capable entry-level IT professional who can work with both software and hardware, even if I am not yet at an advanced level. Use my resume as the main content source and highlight my skills, academic background, internship experience, and personal projects.
+
+Include the following sections:
+
+Hero Section – My name, a headline like “Fresh Graduate | Aspiring IT Support Specialist & Software Developer”, a short bio introducing myself as eager to learn and contribute, and a placeholder for a professional photo.
+
+Skills Overview – Present my technical skills (software development basics, hardware troubleshooting, networking, databases) and soft skills (problem-solving, teamwork, adaptability). Use simple badges or icons instead of expert-level charts.
+
+Projects & Coursework – Showcase academic projects, internship tasks, or practice projects that reflect my knowledge in both hardware and software. For each: title, short description, technologies used, and learning outcome.
+
+Experience – Internship or part-time roles with responsibilities and what I learned (not exaggerated achievements, but practical exposure).
+
+Education – My degree, university, graduation date, and key courses that shaped my IT knowledge.
+
+Certifications & Training – Include relevant certificates or online training I’ve completed to show continuous learning.
+
+Problem-Solving Examples – Highlight situations where I applied IT knowledge during internship or school projects, in a simple Situation → Action → Result format.
+
+Contact Section – Email, LinkedIn, GitHub (if available), and a simple contact form.
+
+Footer – Downloadable resume link and copyright.
+
+Requirements:
+
+Clean, mobile-friendly, and easy to update.
+
+Keep the tone supportive of a beginner’s journey while showing growth potential.
+
+Add smooth scrolling, minimal hover animations, and clear typography.
+
+Ensure accessibility and semantic HTML structure.
