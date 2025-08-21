@@ -6,6 +6,12 @@ The project is built as a single-page application with a React frontend and Expr
 
 ## Recent Updates (August 2025)
 - Added Technical Journey Gallery section featuring real photos of hands-on IT work
+- Replaced mock projects with actual software development projects:
+  - Online Learning Platform for Cabuyao ALS (HTML, CSS, JS, PHP, MySQL) - Capstone Project
+  - Library Management System (Java, Java Swing, MySQL) - Academic Project  
+  - Inventory Management System (C#, MySQL, Windows Forms) - Development Project
+  - E-Commerce Platform (HTML, CSS, JS, PHP) - Web Development Project
+- Added professional graduation photo to hero section
 - Implemented minimalist aesthetic design across all components
 - Updated typography with lighter font weights and cleaner layouts
 - Enhanced visual hierarchy with consistent spacing and subtle animations

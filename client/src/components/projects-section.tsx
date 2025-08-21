@@ -4,40 +4,53 @@ import { useRef } from "react";
 import { ExternalLink } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
+// Import project screenshots
+import alsProjectImage from "@assets/Screenshot 2024-11-14 025523_1755797269715.png";
+import librarySystemImage from "@assets/Screenshot 2025-08-22 011158_1755797262500.png";
+import inventorySystemImage from "@assets/413026850_919894533007379_812480102757554550_n_1755797286663.png";
+import ecommerceImage from "@assets/Screenshot 2025-08-22 011455_1755797262500.png";
+
 const projectsData = [
   {
-    title: "Computer Lab Management System",
-    description: "Developed an automated monitoring system for 50+ lab computers, reducing maintenance time by 30% and improving overall uptime.",
-    image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=400",
-    technologies: ["Windows Server", "PowerShell", "SQL"],
-    period: "Jan 2025 - April 2025",
+    title: "Online Learning Platform for Cabuyao ALS",
+    description: "Capstone project: Comprehensive e-learning platform for the Alternative Learning System program, featuring enrollment, modules, assessments, and progress tracking.",
+    image: alsProjectImage,
+    technologies: ["HTML", "CSS", "JavaScript", "PHP", "MySQL"],
+    period: "Capstone Project 2024",
   },
   {
-    title: "Network Infrastructure Optimization",
-    description: "Configured and optimized network infrastructure for 6 computer labs, improving connectivity and reducing downtime by 20%.",
-    image: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=400",
-    technologies: ["Cisco", "Network Config", "LAN/WAN"],
-    period: "Ongoing Project",
+    title: "Library Management System",
+    description: "Desktop application for Pamantasan ng Cabuyao library operations with book inventory, member management, and transaction tracking.",
+    image: librarySystemImage,
+    technologies: ["Java", "Java Swing", "MySQL"],
+    period: "Academic Project",
   },
   {
-    title: "IT Documentation & Reporting System",
-    description: "Created comprehensive documentation system and automated reporting tools to improve knowledge sharing and team efficiency.",
-    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=400",
-    technologies: ["Python", "Excel VBA", "Analytics"],
-    period: "Completed",
+    title: "Inventory Management System",
+    description: "Windows-based inventory application with comprehensive tracking, delivery management, point of sale, and sales monitoring capabilities.",
+    image: inventorySystemImage,
+    technologies: ["C#", "MySQL", "Windows Forms"],
+    period: "Development Project",
+  },
+  {
+    title: "E-Commerce Platform",
+    description: "Full-featured online shopping platform with product catalog, shopping cart, user authentication, and comprehensive order management system.",
+    image: ecommerceImage,
+    technologies: ["HTML", "CSS", "JavaScript", "PHP"],
+    period: "Web Development Project",
   },
 ];
 
 const technologyColors: { [key: string]: string } = {
-  "Windows Server": "bg-navy text-white",
-  "PowerShell": "bg-light-blue text-white",
-  "SQL": "bg-accent text-white",
-  "Cisco": "bg-navy text-white",
-  "Network Config": "bg-light-blue text-white",
-  "LAN/WAN": "bg-accent text-white",
-  "Python": "bg-navy text-white",
-  "Excel VBA": "bg-light-blue text-white",
-  "Analytics": "bg-accent text-white",
+  "HTML": "bg-orange-500 text-white",
+  "CSS": "bg-blue-500 text-white", 
+  "JavaScript": "bg-yellow-500 text-black",
+  "PHP": "bg-purple-600 text-white",
+  "MySQL": "bg-blue-600 text-white",
+  "Java": "bg-red-600 text-white",
+  "Java Swing": "bg-red-500 text-white",
+  "C#": "bg-green-600 text-white",
+  "Windows Forms": "bg-gray-600 text-white",
 };
 
 export default function ProjectsSection() {
@@ -68,7 +81,7 @@ export default function ProjectsSection() {
           </motion.p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-2 gap-8">
           {projectsData.map((project, index) => (
             <motion.div
               key={project.title}
