@@ -64,15 +64,6 @@ const technicalGalleryData = [
   },
   {
     id: 5,
-    title: "Network Infrastructure Setup",
-    description: "Network cable management and infrastructure installation",
-    image: networkingImage,
-    category: "Networking",
-    icon: Network,
-    skills: ["Network Cabling", "Infrastructure Setup", "Cable Management"]
-  },
-  {
-    id: 6,
     title: "Team Collaboration & Training",
     description: "Working with technical teams and providing hands-on training sessions",
     image: teamWorkImage,
@@ -81,7 +72,7 @@ const technicalGalleryData = [
     skills: ["Team Leadership", "Technical Training", "Knowledge Transfer"]
   },
   {
-    id: 7,
+    id: 6,
     title: "Computer Laboratory Management",
     description: "Managing and maintaining large-scale computer laboratory environments",
     image: computerLabImage,
@@ -89,15 +80,7 @@ const technicalGalleryData = [
     icon: Monitor,
     skills: ["Lab Management", "System Maintenance", "Multi-system Administration"]
   },
-  {
-    id: 8,
-    title: "Audio-Visual System Setup",
-    description: "Professional audio mixing board configuration for multimedia systems",
-    image: audioSystemImage,
-    category: "AV Systems",
-    icon: Settings,
-    skills: ["Audio Systems", "AV Configuration", "Event Technology"]
-  }
+
 ];
 
 export default function TechnicalGallerySection() {

@@ -5,21 +5,21 @@ import { Clock, Dock, Users } from "lucide-react";
 
 const caseStudiesData = [
   {
-    title: "Reducing System Downtime in Computer Labs",
-    duration: "3 months",
-    scope: "50+ Computers",
-    situation: "Computer labs experienced frequent system failures and prolonged downtime, affecting 200+ students daily and disrupting academic schedules.",
-    action: "Implemented comprehensive monitoring system, standardized computer configurations, and established preventive maintenance protocols across all 6 labs.",
-    result: "Achieved 20% reduction in downtime, 30% faster issue resolution, and improved student satisfaction scores by 25%.",
+    title: "Developing Online Learning Platform for Cabuyao ALS",
+    duration: "6 months",
+    scope: "Capstone Project",
+    situation: "Cabuyao ALS program needed a digital learning platform to support students with flexible online education, but had no existing e-learning system.",
+    action: "Designed and developed a comprehensive web-based platform using HTML, CSS, JavaScript, PHP, and MySQL with enrollment, modules, assessments, and progress tracking features.",
+    result: "Successfully delivered a working online learning platform that supports student enrollment, course management, and progress tracking for the ALS program.",
     icon: Dock,
   },
   {
-    title: "Streamlining IT Documentation Process",
-    duration: "2 months",
-    scope: "10+ Team Members",
-    situation: "IT team struggled with inconsistent documentation practices, leading to knowledge gaps and inefficient troubleshooting processes.",
-    action: "Developed standardized documentation templates, created automated reporting systems, and trained team members on new procedures.",
-    result: "Improved knowledge sharing efficiency by 40%, reduced training time for new team members by 50%, and enhanced overall team productivity.",
+    title: "PC Hardware Assembly and Troubleshooting",
+    duration: "During Internship",
+    scope: "Computer Lab Setup",
+    situation: "Multiple desktop computers needed hardware upgrades and component installation, including SSD installations and system optimization for better performance.",
+    action: "Performed hands-on PC building, component installation, SSD upgrades, BIOS configuration, and system testing to ensure optimal performance.",
+    result: "Successfully assembled and optimized multiple systems, gained practical hardware troubleshooting experience, and improved system performance through proper configurations.",
     icon: Users,
   },
 ];
