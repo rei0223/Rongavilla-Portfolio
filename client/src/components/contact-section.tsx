@@ -79,12 +79,6 @@ export default function ContactSection() {
       label: "Location",
       value: "Cabuyao City, Laguna, Philippines",
     },
-    {
-      icon: SiLinkedin,
-      label: "LinkedIn",
-      value: "linkedin.com/in/reyann-rongavilla",
-      href: "#",
-    },
   ];
 
   return (
@@ -143,14 +137,7 @@ export default function ContactSection() {
               ))}
             </div>
 
-            {/* QR Code Placeholder */}
-            <div className="mt-8 p-6 bg-white rounded-xl text-center border border-gray-200 shadow-sm">
-              <p className="text-gray-700 font-medium mb-4">Scan to view portfolio</p>
-              <div className="w-24 h-24 bg-gray-100 rounded-lg mx-auto flex items-center justify-center" data-testid="qr-code-placeholder">
-                <QrCode className="w-12 h-12 text-gray-400" />
-              </div>
-              <p className="text-gray-500 text-sm mt-2">QR Code to Portfolio</p>
-            </div>
+
           </motion.div>
 
           {/* Contact Form */}

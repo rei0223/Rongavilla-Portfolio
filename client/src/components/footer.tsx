@@ -14,7 +14,7 @@ export default function Footer() {
               Rey-Ann Rongavilla
             </h3>
             <p className="text-gray-400 text-sm" data-testid="footer-subtitle">
-              IT Professional & System Administrator
+              Fresh Graduate | Aspiring IT Support Specialist & Software Developer
             </p>
           </div>
 
@@ -36,20 +36,7 @@ export default function Footer() {
               >
                 <Mail className="w-5 h-5" />
               </a>
-              <a
-                href="#"
-                className="text-gray-400 hover:text-white transition-colors"
-                data-testid="footer-link-linkedin"
-              >
-                <SiLinkedin className="w-5 h-5" />
-              </a>
-              <a
-                href="#"
-                className="text-gray-400 hover:text-white transition-colors"
-                data-testid="footer-link-github"
-              >
-                <Github className="w-5 h-5" />
-              </a>
+
             </div>
           </div>
         </div>

@@ -12,9 +12,13 @@ The project is built as a single-page application with a React frontend and Expr
   - Inventory Management System (C#, MySQL, Windows Forms) - Development Project
   - E-Commerce Platform (HTML, CSS, JS, PHP) - Web Development Project
 - Added professional graduation photo to hero section
-- Implemented minimalist aesthetic design across all components
-- Updated typography with lighter font weights and cleaner layouts
-- Enhanced visual hierarchy with consistent spacing and subtle animations
+- Transformed to modern minimalist design with unique color palette:
+  - Light gray and white backgrounds with accent green (#e53e3e -> #22c55e) 
+  - Clean typography with lighter font weights
+  - Rounded corners and subtle shadows throughout
+  - Consistent "Fresh Graduate | Aspiring IT Support Specialist & Software Developer" branding
+- Removed non-functional elements: QR code placeholder and non-clickable social icons
+- Updated footer to match header branding consistency
 
 # User Preferences
 
